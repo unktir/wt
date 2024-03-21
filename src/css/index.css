@@ -1,5 +1,10 @@
 @import url("normalize.css");
 
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -13,14 +18,46 @@
     margin-right: auto;
 }
 
-.content {
-    /*width: 1170px;*/
+.header-main {
+    height: 102px;
+    display: flex;
+    background-color: #fff;
+}
+
+.nav-main {
+    display: flex;
+    align-items: center;
+}
+
+.nav-main__logo {
 
 }
 
-header {
-    background-color: red;
-    height: 102px;
+.nav-main__list {
+    list-style: none;
+    margin-left: 330px;
+}
+
+.nav-main__item {
+    display: inline-block;
+}
+
+.nav-main__item:nth-child(n+2) {
+    margin-left: 20px;
+}
+
+.nav-main__link {
+    font-size: 12px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.nav-main__link_active {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 main {
