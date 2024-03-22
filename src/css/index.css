@@ -51,6 +51,7 @@ body {
 
 .nav-main__link {
     font-size: 12px;
+    line-height: 12px;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -75,6 +76,7 @@ body {
 .hero-section__header {
     display: inline-block;
     font-size: 64px;
+    line-height: 64px;
 }
 
 .hero-section__header_light {
@@ -84,7 +86,7 @@ body {
 }
 
 .carousel {
- display: flex;
+    display: flex;
 }
 
 .carousel__control {
@@ -122,6 +124,7 @@ body {
 
 .carousel__indicators p {
     font-size: 24px;
+    line-height: 24px;
     color: #bdbdbd;
     display: flex;
     align-items: center;
