@@ -34,6 +34,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Black.ttf);
+    font-weight: 900;
+    font-style: normal;
+}
+
 /* Italic */
 @font-face {
     font-family: Roboto;
@@ -67,5 +74,12 @@
     font-family: Roboto;
     src: url(../fonts/Roboto/Roboto-BoldItalic.ttf);
     font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-BlackItalic.ttf);
+    font-weight: 900;
     font-style: italic;
 }
