@@ -194,6 +194,13 @@ body {
 
 .carousel__item {
     position: relative;
+    height: 829px;
+    width: 770px;
+    background-color: #c4c4c4;
+}
+
+.carousel__item img {
+    object-fit: cover;
 }
 
 .carousel__more-button {
@@ -322,6 +329,11 @@ body {
 
 .our-projects__item {
     height: 255px;
+    background-color: #c4c4c4;
+}
+
+.our-projects__item img {
+    object-fit: cover;
 }
 
 .our-projects__link {
