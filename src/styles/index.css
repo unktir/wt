@@ -25,13 +25,13 @@ body {
     justify-content: center;
     height: 71px;
     width: 222px;
+    color: #333;
     background-color: #fff;
     border: none;
     cursor: pointer;
 }
 
 .button__more p {
-    color: #333;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.2em;
@@ -43,11 +43,8 @@ body {
 }
 
 .button__more:hover {
-    background-color: #333;
-}
-
-.button__more:hover p {
     color: #fff;
+    background-color: #333;
 }
 
 .button__more:hover img {
