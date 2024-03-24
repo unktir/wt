@@ -129,6 +129,11 @@ body {
     border: 1px solid #f2f2f2;
 }
 
+.carousel__control-prev img,
+.carousel__control-next img {
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
+}
+
 .carousel__control-prev {
     transform: rotate(180deg);
 }
@@ -170,6 +175,10 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
+}
+
+.carousel__more-button img {
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
 }
 
 /* About section */
@@ -224,6 +233,10 @@ body {
 
 .about-section__more-button {
     margin-top: 45px;
+}
+
+.about-section__more-button img {
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
 }
 
 .rectangle {
