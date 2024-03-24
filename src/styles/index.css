@@ -303,6 +303,72 @@ body {
     color: #333;
 }
 
+/* Our Projects */
+
+.our-projects {
+    margin-top: 120px;
+}
+
+.our-projects__projects {
+    margin-top: 60px;
+}
+
+.our-projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+}
+
+.our-projects__item {
+    height: 255px;
+}
+
+.our-projects__link {
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+}
+
+.our-projects__info {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(51, 51, 51, 0.8);
+    opacity: 0;
+}
+
+.our-projects__item:hover .our-projects__info {
+    opacity: 1;
+}
+
+.our-projects__h2 {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 700;
+}
+
+.our-projects__more {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.our-projects__more img {
+    margin-left: 15px;
+    filter: invert(100%);
+}
+
 /* Footer */
 
 .footer-main {
