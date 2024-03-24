@@ -398,6 +398,88 @@ body {
     filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
 }
 
+/* Contact Us */
+
+.contact-us {
+    margin-top: 120px;
+}
+
+.contact-us__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-us__form {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-us__input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us__input-group:nth-child(n+2) {
+    margin-top: 10px;
+}
+
+.contact-us__label,
+.contact-us__input {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.contact-us__label {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: 21px;
+    color: #8d8d8d;
+    cursor: text;
+}
+
+.contact-us__input {
+    height: 45px;
+    width: 391px;
+    padding: 15px 21px;
+    border: 0;
+    color: #333;
+    background-color: #f3f3f3;
+}
+
+.contact-us__input:required ~ .contact-us__label span {
+    color: #c30000;
+}
+
+.contact-us__input:focus ~ .contact-us__label,
+.contact-us__input:not(:placeholder-shown) ~ .contact-us__label {
+    z-index: -1;
+}
+
+.contact-us__more-button {
+    margin-top: 77px;
+    color: #fff;
+    background-color: #333;
+}
+
+.contact-us__more-button img {
+    filter: invert(100%)
+}
+
+.contact-us__more-button:hover {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.contact-us__more-button:hover img {
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
+}
+
 /* Footer */
 
 .footer-main {
