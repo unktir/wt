@@ -41,6 +41,14 @@ body {
     margin-left: 15px;
 }
 
+.main-h1 {
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #bdbdbd;
+}
+
 /* Header */
 
 .header-main {
@@ -97,14 +105,13 @@ body {
 
 .hero-section__header {
     display: inline-block;
-    font-size: 64px;
-    line-height: 64px;
+    text-transform: uppercase;
 }
 
-.hero-section__header_light {
-    font-weight: 300;
-    text-transform: uppercase;
-    color: #bdbdbd
+.hero-section__header_bold {
+    color: #333;
+    font-weight: 700;
+    text-transform: capitalize;
 }
 
 .carousel {
@@ -216,11 +223,6 @@ body {
 
 .about-section__header {
     margin-top: 30px;
-    font-size: 64px;
-    line-height: 64px;
-    font-weight: 300;
-    text-transform: capitalize;
-    color: #bdbdbd;
 }
 
 .about-section__description {
@@ -251,14 +253,6 @@ body {
 
 .main-focus {
     margin-top: 120px;
-}
-
-.main-focus__header {
-    font-size: 64px;
-    line-height: 64px;
-    font-weight: 300;
-    text-transform: capitalize;
-    color: #bdbdbd;
 }
 
 .main-focus__statements {
