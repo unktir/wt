@@ -27,6 +27,7 @@ body {
     width: 222px;
     background-color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 .button__more p {
@@ -39,6 +40,18 @@ body {
 
 .button__more img {
     margin-left: 15px;
+}
+
+.button__more:hover {
+    background-color: #333;
+}
+
+.button__more:hover p {
+    color: #fff;
+}
+
+.button__more:hover img {
+    filter: invert(100%);
 }
 
 .main-h1 {
@@ -89,7 +102,7 @@ body {
     padding: 5px 15px;
 }
 
-.nav-main__link_active {
+.nav-main__link:hover {
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
@@ -134,11 +147,17 @@ body {
     width: 53px;
     background-color: #fff;
     border: 1px solid #f2f2f2;
+    cursor: pointer;
 }
 
 .carousel__control-prev img,
 .carousel__control-next img {
     filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
+}
+
+.carousel__control-prev:hover,
+.carousel__control-next:hover {
+    background-color: #f9f9f9;
 }
 
 .carousel__control-prev {
@@ -147,7 +166,6 @@ body {
 
 .carousel__control-next {
     margin-left: 22px;
-    background-color: #f9f9f9;
 }
 
 .carousel__indicators {
