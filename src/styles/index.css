@@ -378,6 +378,26 @@ body {
     filter: invert(100%);
 }
 
+.our-projects__more-button {
+    margin-top: 30px;
+    margin-left: auto;
+    color: #fff;
+    background-color: #333;
+}
+
+.our-projects__more-button img {
+    filter: invert(100%)
+}
+
+.our-projects__more-button:hover {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.our-projects__more-button:hover img {
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
+}
+
 /* Footer */
 
 .footer-main {
