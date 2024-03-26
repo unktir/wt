@@ -73,7 +73,9 @@ body {
 }
 
 .nav-main__logo {
-
+    width:70px;
+    height: 44px;
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
 }
 
 .nav-main__list {
