@@ -1,0 +1,58 @@
+@import url("index.css");
+
+/* Contact information */
+
+.contact-section {
+    display: flex;
+    height: 501px;
+}
+
+.contact-section__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-section__description {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.contact-section__address {
+    
+}
+
+.contact-section__address span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contact-section__phone-number { 
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contact-section__email {
+    
+}
+
+.contact-section__more-button {
+    margin-top: 30px;
+    color: #fff;
+    background-color: #333;
+}
+
+.contact-section__more-button:hover {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.contact-section__map {
+    position: absolute;
+    right: 0;
+}
