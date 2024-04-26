@@ -47,14 +47,21 @@
                     </div>
                     <div class="carousel__indicators">
                         <p>
-                            <span>01</span>
+                            <span id="carousel_item_index">01</span>
                             <img src="images/shared/line.svg" alt="slash">
-                            <span>02</span>
+                            <span id="carousel_item_count">02</span>
                         </p>
                     </div>
                     <div class="carousel__inner">
                         <div class="carousel__item">
-                            <img src="images/main-page/hero-section/builds.png" alt="hero image">
+                            <img class="carousel__img" src="images/main-page/hero-section/builds.png" alt="hero image">
+                            <button class="carousel__more-button button__more">
+                                <p>View project</p>
+                                <img src="images/shared/arrow-right-long.svg" alt="arrow right">
+                            </button>
+                        </div>
+                        <div class="carousel__item">
+                            <img class="carousel__img" src="images/main-page/our-projects/image_2.png" alt="hero image">
                             <button class="carousel__more-button button__more">
                                 <p>View project</p>
                                 <img src="images/shared/arrow-right-long.svg" alt="arrow right">
@@ -316,5 +323,6 @@
         </footer>
     </body>
     <script type="module" src="scripts/index.js"></script>
+    <script type="module" src="scripts/carousel.js"></script>
     <script type="module" src="scripts/form.js"></script>
 </html>

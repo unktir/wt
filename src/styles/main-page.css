@@ -92,8 +92,10 @@
     background-color: #c4c4c4;
 }
 
-.carousel__item img {
+.carousel__img {
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .carousel__more-button {
