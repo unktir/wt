@@ -21,10 +21,6 @@
     
 }
 
-.carousel__item:nth-child(n+2) {
-    margin-top: 60px;
-}
-
 .carousel__item img {
     object-fit: cover;
 }
@@ -34,6 +30,10 @@
     height: 435px;
     background-color: #fbfbfb;
     display: flex;
+}
+
+.project-card:nth-child(n+2) {
+    margin-top: 60px;
 }
 
 .project-card__info {
