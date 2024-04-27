@@ -31,8 +31,8 @@ function updateSlider() {
             carousel_item.style.display = 'none';
         }
     });
-    carousel.querySelector("#carousel_item_index").innerText = carousel_item_index + 1;
-    carousel.querySelector("#carousel_item_count").innerText = carousel_item_count;
+    carousel.querySelector("#carousel_item_index").innerText = String(carousel_item_index + 1).padStart(2, '0');
+    carousel.querySelector("#carousel_item_count").innerText = String(carousel_item_count).padStart(2, '0');;
 
 }
 
