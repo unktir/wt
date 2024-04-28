@@ -1,5 +1,6 @@
 @import url("index.css");
-@import url("modal.css");
+@import url("modal/modal-form.css");
+@import url("modal/modal-form-sended.css");
 
 /* Contact information */
 
