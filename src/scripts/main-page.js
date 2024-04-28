@@ -1,3 +1,4 @@
+import "./index.js";
 import "./carousel.js";
 
 let modal_form_sended = document.getElementById("modal-form-sended");

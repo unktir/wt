@@ -1,3 +1,5 @@
+import "./index.js";
+
 let modal_form = document.getElementById("modal-form");
 let modal_form_sended = document.getElementById("modal-form-sended");
 
