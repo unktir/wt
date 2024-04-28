@@ -38,5 +38,3 @@ function updateSlider() {
 
 // Инициализация слайдера
 updateSlider();
-
-console.log(carousel_item_count)
