@@ -326,6 +326,7 @@
 
 .contact-us__label,
 .contact-us__input {
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.04em;
