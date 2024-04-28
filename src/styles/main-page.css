@@ -76,6 +76,10 @@
     align-items: center;
 }
 
+.carousel__indicators img {
+    filter: invert(96%) sepia(1%) saturate(3%) hue-rotate(141deg) brightness(111%) contrast(76%);
+}
+
 .carousel__indicators *:nth-child(n+2) {
     margin-left: 20px;
 }
