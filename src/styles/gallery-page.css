@@ -14,21 +14,28 @@
 .carousel__inner {
     padding-top: 30px;
     padding-bottom: 30px;
-    display: flex;
-    flex-wrap: wrap;
     overflow: hidden;
-    gap: 30px;
 }
 
 .carousel__item {
-    position: relative;
-    height: 260px;
-    width: 210px;
-    background-color: #c4c4c4;
+    
 }
 
 .carousel__item img {
     object-fit: cover;
+}
+
+.project-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.project-image {
+    position: relative;
+    height: 260px;
+    width: 210px;
+    background-color: #c4c4c4;
 }
 
 .carousel__navigator {
