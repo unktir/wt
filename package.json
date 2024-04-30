@@ -1,6 +1,7 @@
 {
   "name": "wt",
   "version": "0.2.0",
+  "packageManager": "yarn@4.1.1",
   "type": "module",
   "private": true,
   "scripts": {}
