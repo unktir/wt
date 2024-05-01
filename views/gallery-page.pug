@@ -8,13 +8,12 @@ block content
     section.gallery-carousel
         .carousel
             .carousel__inner
-                .carousel__item
-                    .project-images
-                        .project-image
-                            //- <img src="" alt="No image">
-                        each item in gallery_page.project_images
-                            .project-image
-                                img(src=item.src alt=item.alt)
+                each items in gallery_page.carousel_items
+                    .carousel__item
+                        .project-images
+                            each item in items.project_images
+                                .project-image
+                                    img(src=item.src alt=item.alt)
             .carousel__navigator
                 .carousel__indicators
                     p
