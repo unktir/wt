@@ -1,0 +1,28 @@
+extends layout.pug
+
+block content
+    h1.main-h1.page-header
+        span Photo
+        br
+        span.page-header_bold Gallery
+    section.gallery-carousel
+        .carousel
+            .carousel__inner
+                .carousel__item
+                    .project-images
+                        .project-image
+                            //- <img src="" alt="No image">
+                        each item in gallery_page.project_images
+                            .project-image
+                                img(src=item.src alt=item.alt)
+            .carousel__navigator
+                .carousel__indicators
+                    p
+                        span#carousel_item_index 01
+                        img(src='images/shared/line.svg' alt='slash')
+                        span#carousel_item_count 05
+                .carousel__control
+                    button.carousel__control-prev
+                        img(src='images/shared/arrow-right-long.svg' alt='arrow left')
+                    button.carousel__control-next
+                        img(src='images/shared/arrow-right-long.svg' alt='arrow right')
