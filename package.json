@@ -1,7 +1,7 @@
 {
   "name": "wt",
   "version": "0.2.0",
-  "type": "module",
+  "type": "commonjs",
   "private": true,
   "scripts": {}
 }
