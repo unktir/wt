@@ -1,7 +1,43 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+head
+    meta(charset='utf-8')
+    title #{title}
+    link(rel='stylesheet' href='stylesheets/' + page_name + '.css')
+body.wrapper
+    header.container.header-main
+        nav.nav-main
+            a.nav-main__logo(href=layout.logo.link.href)
+                img(src=layout.logo.link.image.src alt=layout.logo.link.image.alt)
+            ul.nav-main__list
+                each item in layout.navigation
+                    li.nav-main__item
+                        a.nav-main__link(href=item.href) #{item.name}
+    main.container.main-main
+        block content
+    footer.footer-main
+        .footer-main__layout.container
+            a.footer-main__logo(href=layout.logo.link.href)
+                img(src=layout.logo.link.image.src alt=layout.logo.link.image.alt)
+            nav.footer-main__nav
+                h6.footer-main__header Information
+                ul.footer-main__list
+                    each item in layout.navigation
+                        li.footer-main__nav-item
+                            a.footer-main__nav-link.footer-main__link(href=item.href) #{item.name}
+            .footer-main__contacts
+                h6.footer-main__header Contacts
+                ul.footer-main__list.contacts-list
+                    each item in layout.contacts
+                        li.footer-main__contacts-list-item
+                            img(src=item.image.src alt=item.image.alt)
+                            a.footer-main__contacts-link.footer-main__link(href=item.link.href) !{item.link.text}
+            .footer-main__social-media
+                h6.footer-main__header Social Media
+                ul.footer-main__social-media-list.footer-main__list
+                    each item in layout.social_media
+                        li.footer-main__social-media-list-item
+                            a.footer-main__social-media-link(href=item.link.href)
+                                img(src=item.link.image.src alt=item.link.image.alt)
+        .footer-main__copyright
+            p &copy; 2021 All Rights Reserved
+    script(type='module' src='javascripts/' + page_name + '.js')

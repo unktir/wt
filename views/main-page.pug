@@ -1,0 +1,92 @@
+extends layout.pug
+
+block content
+    include modal/modal-dorm-sended.pug
+    section.hero-section
+        h1.main-h1.hero-section__header
+            span Project
+            br
+            span.hero-section__header_bold Lorum
+        .carousel
+            .carousel__control
+                button.carousel__control-prev
+                    img(src='images/shared/arrow-right-long.svg' alt='arrow left')
+                button.carousel__control-next
+                    img(src='images/shared/arrow-right-long.svg' alt='arrow right')
+            .carousel__indicators
+                p
+                    span#carousel_item_index 01
+                    img(src='images/shared/line.svg' alt='slash')
+                    span#carousel_item_count 02
+            .carousel__inner
+                each item in main_page.hero_section
+                    .carousel__item
+                        img.carousel__img(src=item.image.src alt=item.image.alt)
+                        button.carousel__more-button.button__more
+                            p View project
+                            img(src='images/shared/arrow-right-long.svg' alt='arrow right')
+    section.about-section
+        .rectangle
+        .about-section__images
+            .about-section__image-group
+                img(src=main_page.about_section.images[0].src alt=main_page.about_section.images[0].alt)
+                img(src=main_page.about_section.images[1].src alt=main_page.about_section.images[1].alt)
+            img.about-section__image-side(src=main_page.about_section.images[2].src alt=main_page.about_section.images[2].alt)
+        .about-section__info
+            h1.main-h1.about-section__header About
+            p.about-section__description #{main_page.about_section.description}
+            button.about-section__more-button.button__more
+                p Read more
+                img(src='images/shared/arrow-right-long.svg' alt='arrow right')
+    section.main-focus
+        h1.main-h1 Main Focus/Mission Statement
+        .main-focus__statements
+            each item, index in main_page.main_focus.statements
+                .main-focus__statement
+                    h2.statement__header #{index + 1}
+                    p.statement_description #{item.description}
+    section.our-projects
+        h1.main-h1 Our Projects
+        .our-projects__projects
+            ul.our-projects__list
+                each item in main_page.our_projects.list
+                    li.our-projects__item
+                        a.our-projects__link(href=item.href)
+                            img(src=item.image.src alt=item.image.alt)
+                            .our-projects__info
+                                h2.our-projects__h2 !{item.project_name}
+                                .our-projects__more
+                                    p view more
+                                    img(src='images/shared/arrow-right-long.svg' alt='arrow right')
+            button.our-projects__more-button.button__more
+                p All Projects
+                img(src='images/shared/arrow-right-long.svg' alt='arrow right')
+    section.contact-us
+        h1.main-h1 Contact Us
+        .contact-us__main
+            form#contact_form.contact-us__form
+                .contact-us__input-group
+                    input#name.contact-us__input(type='text' name='name' placeholder='')
+                    label.contact-us__label(for='name') Name
+                .contact-us__input-group
+                    input#phone_number.contact-us__input(type='text' name='phone_number' required='' placeholder='')
+                    label.contact-us__label(for='phone_number')
+                        | Phone Number
+                        span *
+                .contact-us__input-group
+                    input#email.contact-us__input(type='text' name='email' required='' placeholder='')
+                    label.contact-us__label(for='email')
+                        | E-mail
+                        span *
+                .contact-us__input-group
+                    input#interested_in.contact-us__input(type='text' name='interested_in' placeholder='')
+                    label.contact-us__label(for='interested_in') Interested In
+                .contact-us__input-group
+                    input#message.contact-us__input(type='text' name='message' required='' placeholder='')
+                    label.contact-us__label(for='message')
+                        | Message
+                        span *
+                button.contact-us__more-button.button__more(type='submit' form='contact_form')
+                    p Send email
+                    img(src='images/shared/arrow-right-long.svg' alt='arrow right')
+            img(src=main_page.contact_us.image.src alt=main_page.contact_us.image.alt)

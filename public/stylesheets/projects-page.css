@@ -1,0 +1,122 @@
+@import url("index.css");
+
+/* Our projects */
+
+.projects-section {
+    margin-top: 30px;
+    border-top: 1px solid #f2f2f2;
+}
+
+.carousel {
+    
+}
+
+.carousel__inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+.carousel__item {
+    
+}
+
+.carousel__item img {
+    object-fit: cover;
+}
+
+.project-card {
+    width: 1170px;
+    height: 435px;
+    background-color: #fbfbfb;
+    display: flex;
+}
+
+.project-card:nth-child(n+2) {
+    margin-top: 60px;
+}
+
+.project-card__info {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card__header {
+    color: #bdbdbd;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.project-card__description {
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.project-card__more-button {
+    text-decoration: none;
+}
+
+.carousel__navigator {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.carousel__indicators {
+
+}
+
+.carousel__indicators p {
+    font-size: 24px;
+    line-height: 24px;
+    color: #bdbdbd;
+    display: flex;
+    align-items: center;
+}
+
+.carousel__indicators img {
+    filter: invert(96%) sepia(1%) saturate(3%) hue-rotate(141deg) brightness(111%) contrast(76%);
+}
+
+.carousel__indicators *:nth-child(n+2) {
+    margin-left: 30px;
+}
+
+.carousel__control {
+    display: flex;
+    margin-left: 30px;
+}
+
+.carousel__control-prev,
+.carousel__control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 53px;
+    width: 53px;
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+    cursor: pointer;
+}
+
+.carousel__control-prev img,
+.carousel__control-next img {
+    filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(99%) contrast(91%);
+}
+
+.carousel__control-prev:hover,
+.carousel__control-next:hover {
+    background-color: #f9f9f9;
+}
+
+.carousel__control-prev {
+    transform: rotate(180deg);
+}
+
+.carousel__control-next {
+    margin-left: 22px;
+}
