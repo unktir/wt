@@ -1,0 +1,32 @@
+extends layout.pug
+
+block content
+    h1.main-h1.page-header
+        span Our
+        br
+        span.page-header_bold Projects
+    section.projects-section
+        .carousel
+            .carousel__inner
+                    each items in projects_page.carousel_items
+                        .carousel__item
+                            each item in items.project_cards
+                                .project-card
+                                    img(src=item.image.src alt=item.image.alt)
+                                    .project-card__info
+                                        h2.project-card__header #{item.name}
+                                        p.project-card__description #{item.description}
+                                        a.project-card__more-button.button__more(href=item.href)
+                                            p Veiw more
+                                            img(src='images/shared/arrow-right-long.svg' alt='arrow right')
+            .carousel__navigator
+                .carousel__indicators
+                    p
+                        span#carousel_item_index 01
+                        img(src='images/shared/line.svg' alt='slash')
+                        span#carousel_item_count 05
+                .carousel__control
+                    button.carousel__control-prev
+                        img(src='images/shared/arrow-right-long.svg' alt='arrow left')
+                    button.carousel__control-next
+                        img(src='images/shared/arrow-right-long.svg' alt='arrow right')
