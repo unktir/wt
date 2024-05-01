@@ -8,6 +8,7 @@ var main_pageRouter = require('./routes/main-page');
 var gallery_pageRouter = require('./routes/gallery-page');
 var projects_pageRouter = require('./routes/projects-page');
 var certifications_pageRouter = require('./routes/certifications-page');
+var contact_pageRouter = require('./routes/contact-page');
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use('/', main_pageRouter);
 app.use('/gallery', gallery_pageRouter);
 app.use('/projects', projects_pageRouter);
 app.use('/certifications', certifications_pageRouter);
+app.use('/contact', contact_pageRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

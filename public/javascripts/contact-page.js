@@ -19,7 +19,26 @@ document.getElementById("modal_form").addEventListener("submit", (e) => {
     let accept_p_p = document.getElementById("accept_privacy_policy").value;
 
     modal_form.style.display = "none";
-    modal_form_sended.style.display = "flex";
+    var formdata = JSON.stringify({ name, phone_number, email, interested_in, message, accept_p_p });
+
+    fetch("/ajaxrequest",
+    {
+        method: "POST",
+        body: formdata,
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then( response => {
+        response.json().then(function(data) {
+            console.log(data)
+            modal_form_sended.style.display = "flex";
+        });
+    })
+    .catch( error => {
+        alert(error);
+        console.error('error:', error);
+    });
 })
 
 open_modal_button.onclick = function() {

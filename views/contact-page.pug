@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+    include modal/modal-form.pug
+    include modal/modal-form-sended.pug
+    section.contact-section
+        .contact-section__info
+            h1.main-h1.page-header
+                span Contact
+                br
+                span.page-header_bold Information
+            .contact-section__description
+                p.contact-section__address !{contact_page.address}
+                p.contact-section__phone-number #{contact_page.phone_number}
+                p.contact-section__email #{contact_page.email}
+            button#open_form.contact-section__more-button.button__more
+                p Contact Us
+        img.contact-section__map(src=contact_page.image.src alt=contact_page.image.alt)

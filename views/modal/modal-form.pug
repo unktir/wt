@@ -1,0 +1,34 @@
+#modal-form.modal
+    .modal__content
+        button#close-modal-form.modal__close-button
+            img(src='images/shared/cancel-button.svg' alt='close')
+        form#modal_form.modal-form__form
+            fieldset
+                legend.modal-form__legend Ask a question
+                .modal-form__input-group
+                    input#name.modal-form__text-input(type='text' name='name' placeholder='')
+                    label.modal-form__text-label(for='name') Name
+                .modal-form__input-group
+                    input#phone_number.modal-form__text-input(type='text' name='phone_number' required='' placeholder='')
+                    label.modal-form__text-label(for='phone_number')
+                        | Phone Number
+                        span *
+                .modal-form__input-group
+                    input#email.modal-form__text-input(type='text' name='email' required='' placeholder='')
+                    label.modal-form__text-label(for='email')
+                        | E-mail
+                        span *
+                .modal-form__input-group
+                    input#interested_in.modal-form__text-input(type='text' name='interested_in' placeholder='')
+                    label.modal-form__text-label(for='interested_in') Interested In
+                .modal-form__input-group
+                    textarea#message.modal-form__text-input.modal-form__textarea-input(name='message' required='' placeholder='')
+                    label.modal-form__text-label.modal-form__textarea-label(for='message')
+                        | Message
+                        span *
+                .modal-form__input-group
+                    input#accept_privacy_policy.modal-form__checkbox-input(type='checkbox' name='accept_privacy_policy' required='')
+                    label.modal-form__checkbox-label(for='accept_privacy_policy')
+                        | By submitting a request, you agree to the privacy policy
+                button#send-modal-form.modal-form__more-button.modal__more-button.button__more(type='submit' form='modal_form')
+                    p Send email
