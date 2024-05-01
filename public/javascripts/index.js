@@ -1,23 +1,23 @@
 
 let nav_menu = document.getElementsByClassName("nav-main__link")
 let menu_element;
-let path = window.location.pathname;
-let page = path.split("/").pop().split(".").shift();
+let href = window.location.href;
+let page = href.split("/").pop();
 
 switch(page){
     case "":
         menu_element = nav_menu[0];
         break;
-    case "gallery-page":
+    case "gallery":
         menu_element = nav_menu[1];
         break;
-    case "projects-page":
+    case "projects":
         menu_element = nav_menu[2];
         break;
-    case "certifications-page":
+    case "certifications":
         menu_element = nav_menu[3];
         break;
-    case "contact-page":
+    case "contact":
         menu_element = nav_menu[4];
         break;
     default:
