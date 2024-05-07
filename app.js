@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var sequelize = require('sequelize');
 
 var main_pageRouter = require('./routes/main-page');
 var gallery_pageRouter = require('./routes/gallery-page');
@@ -11,6 +12,10 @@ var certifications_pageRouter = require('./routes/certifications-page');
 var contact_pageRouter = require('./routes/contact-page');
 
 var app = express();
+var dbcontext = new sequelize({
+  dialect: "sqlite",
+  storage: "appdb.sqlite"
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -44,4 +49,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+module.exports = {
+  app,
+  dbcontext
+};
