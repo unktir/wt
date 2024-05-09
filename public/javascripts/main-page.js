@@ -16,7 +16,7 @@ document.getElementById("contact_form").addEventListener("submit", (e) => {
 
     var formdata = JSON.stringify({ name, phone_number, email, interested_in, message });
 
-    fetch("/ajaxrequest",
+    fetch("/api/requests",
     {
         method: "POST",
         body: formdata,
