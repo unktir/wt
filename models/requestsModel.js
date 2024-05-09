@@ -1,7 +1,7 @@
-const { dbcontext } = require("../app")
+const dbcontext = require("../sequelize");
 
 // select all data
-exports.get_request_req = function(req, res) {
+get_request_req = function(req, res) {
     dbcontext.query(
         'select * from requests',
         {
@@ -16,7 +16,7 @@ exports.get_request_req = function(req, res) {
     });
 };
 // select data by id
-exports.get_request_req_by_id = function(req, res) {
+get_request_req_by_id = function(req, res) {
     dbcontext.query(
         'select * from requests where id = :id',
         {
@@ -32,24 +32,31 @@ exports.get_request_req_by_id = function(req, res) {
     });
 };
 // insert data
-exports.insert_request_req = function(req, res) {
+insert_request_req = function(req, res) {
+    console.log(req.body);
     dbcontext.query(
-        'insert into requests ( :name , :phone , :email , :interested_in , :message)',
+        'insert into requests (name, phone, email, interested_in, message) values (:name, :phone, :email, :interested_in, :message)',
         {
             replacements: {
-                name: req.params.name,
-                phone: req.params.phone,
-                email: req.params.email,
-                interested_in: req.params.interested_in,
-                message: req.params.message
+                name: req.body.name,
+                phone: req.body.phone_number,
+                email: req.body.email,
+                interested_in: req.body.interested_in,
+                message: req.body.message
             },
             type: dbcontext.QueryTypes.INSERT
         }
     )
     .then(data => {
-        res.json(data[0]);
+        res.json({message: "Ваш запрос получен!"});
     })
     .catch(err => {
         res.status(500).json({message: err.message});
     });
 };
+
+module.exports = {
+    get_request_req,
+    get_request_req_by_id,
+    insert_request_req
+}
