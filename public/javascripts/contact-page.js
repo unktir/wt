@@ -21,7 +21,7 @@ document.getElementById("modal_form").addEventListener("submit", (e) => {
     modal_form.style.display = "none";
     var formdata = JSON.stringify({ name, phone_number, email, interested_in, message, accept_p_p });
 
-    fetch("/ajaxrequest",
+    fetch("/api/requests",
     {
         method: "POST",
         body: formdata,
