@@ -1,23 +1,26 @@
+const bcrypt = require('bcrypt');
+const dbcontext = require("../sequelize");
+
 register_user = function(req, res) {
-    if (!req.body.loginField || !req.body.emailField || !req.body.passField) {
+    if (!req.body.username || !req.body.email || !req.body.password) {
         res.status(400).json({ message: "The data entered are not correct!" });
-    return;
+        return;
     }
     const salt = bcrypt.genSaltSync();
-    var hashed = bcrypt.hashSync(req.body.passField, salt);
+    var hashed = bcrypt.hashSync(req.body.password, salt);
     dbcontext.query(
-        'insert into logins (username, password, email) values (:username, :password, :email)',
+        'insert into logins (username, email, password) values (:username, :email, :password)',
         {
             replacements: {
-                username: req.body.loginField,
-                password: hashed,
-                email: req.body.emailField
+                username: req.body.username,
+                email: req.body.email,
+                password: hashed
             },
             type: dbcontext.QueryTypes.INSERT
         }
     )
     .then(result => {
-        console.log(`Registered as ${req.body.loginField}`);
+        console.log(`Registered as ${req.body.username}`);
         res.redirect('/login');
     })
     .catch(err => {
@@ -26,8 +29,8 @@ register_user = function(req, res) {
 };
 
 login_user = function(req, res) {
-    var login = req.body.loginField;
-    var password = req.body.passField;
+    var login = req.body.username;
+    var password = req.body.password;
     dbcontext.query(
         'SELECT * FROM logins WHERE "username" = :username',
         {
