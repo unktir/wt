@@ -21,7 +21,7 @@ switch(page){
         menu_element = nav_menu[4];
         break;
     default:
-        menu_element = nav_menu[0];
+        menu_element = NULL;
 }
 
 menu_element.style.cssText = `
