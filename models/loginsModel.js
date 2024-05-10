@@ -54,7 +54,16 @@ login_user = function(req, res) {
     });
 }
 
+sessionCheck = (req, res, next) => {
+    if (!req.session.user || req.cookies['AuthToken'] != req.session.user) {
+        res.redirect('/login');
+    } else {
+        next();
+    }    
+};
+
 module.exports = {
     register_user,
-    login_user
+    login_user,
+    sessionCheck
 }
