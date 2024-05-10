@@ -10,6 +10,10 @@ var gallery_pageRouter = require('./routes/gallery-page');
 var projects_pageRouter = require('./routes/projects-page');
 var certifications_pageRouter = require('./routes/certifications-page');
 var contact_pageRouter = require('./routes/contact-page');
+
+var login_pageRouter = require('./routes/login-page');
+var registration_pageRouter = require('./routes/registration-page');
+
 var requests_router = require('./routes/requests');
 
 var app = express();
@@ -40,6 +44,10 @@ app.use('/gallery', gallery_pageRouter);
 app.use('/projects', projects_pageRouter);
 app.use('/certifications', certifications_pageRouter);
 app.use('/contact', contact_pageRouter);
+
+app.use('/login', login_pageRouter);
+app.use('/registration', registration_pageRouter);
+
 app.use('/api/requests', requests_router);
 
 // catch 404 and forward to error handler
