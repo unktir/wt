@@ -2,16 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 var layout = require('../controllers/layoutController');
-var login_page = require('../controllers/loginConroller');
+var login_page = require('../controllers/loginController');
 
 var loginsModel = require("../models/loginsModel");
-
-// router.get('/', function(req, res) {
-//     res.render('login', { 
-//       title: 'Whitesquare',
-//       pname: 'AUTH',
-//       navmenu: navmenu });
-// });
 
 var data = {
     title: 'Digital Project',
@@ -28,7 +21,7 @@ router.post('/', (req, res) => {
     if (!req.body.regBtn) {
       loginsModel.login_user(req, res);
     }
-    else res.redirect('/register');
-  });
+    else res.redirect('/registration');
+});
   
 module.exports = router;
