@@ -1,0 +1,117 @@
+@import url("index.css");
+
+/* Normalize */
+
+fieldset {
+    margin-inline: unset;
+    padding-inline: unset;
+    padding-block: unset;
+    min-inline-size: unset;
+    border: unset;
+}
+
+legend {
+    padding-inline: unset;
+    unicode-bidi: unset;
+    border: unset;
+}
+
+.login {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login__form {
+}
+
+.login__legend {
+    text-align: center;
+    color: #333;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.login__fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__input-group {
+    position: relative;
+    display: flex;
+}
+
+.login__input-group:first-of-type {
+    margin-top: 26px;
+}
+
+.login__input-group:nth-child(n+3) {
+    margin-top: 10px;
+}
+
+.login__label,
+.login__input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.login__label {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-left: 21px;
+    color: #8d8d8d;
+    cursor: text;
+}
+
+.login__input {
+    height: 45px;
+    width: 391px;
+    padding: 15px 21px;
+    border: 0;
+    color: #333;
+    background-color: #f3f3f3;
+}
+
+.login__input:required ~ .login__label span {
+    color: #c30000;
+}
+
+.login__input:focus ~ .login__label,
+.login__input:not(:placeholder-shown) ~ .login__label {
+    z-index: -1;
+}
+
+.login__more-button {
+    margin-top: 27px;
+    color: #fff;
+    background-color: #333;
+    height: 50px;
+    width: 222px;
+}
+
+.login__more-button:hover {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.login__register-link {
+    margin-top: 20px;
+}
+
+.login__register-link a {
+    margin-left: 10px;
+    color: #89aadf;
+    text-decoration: none;
+}

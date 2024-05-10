@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+    section.login
+        form(method="POST", action="registration")#login_form.login__form
+            fieldset.login__fieldset
+                legend.login__legend Registration
+                .login__input-group
+                    input#username.login__input(type='text' name='username' required='' placeholder='')
+                    label.login__label(for='username') Username
+                .login__input-group
+                    input#email.login__input(type='email' name='email' required='' placeholder='')
+                    label.login__label(for='email') E-mail
+                .login__input-group
+                    input#password.login__input(type='password' name='password' required='' placeholder='')
+                    label.login__label(for='password') Password
+                button.login__more-button.button__more(type='submit' form='login_form')
+                    p Sign up
+        
